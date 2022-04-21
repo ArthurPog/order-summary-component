@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Order summary card</title>
+
+  <style>
+    * {
+      font-family: 'Red Hat Display', sans-serif;
+      color: #7280a7;
+      font-size: 16px;
+    }
+    @media screen and (max-height: 740px) {
+    body {
+      background: #e0e8ff url("./images/pattern-background-desktop.svg");
+      background-repeat: repeat-x;
+      display: flex;
+      margin: 20px;
+      justify-content: center;
+    }
+    .main{
+      height: 100%;
+      width: 100%;
+      max-width: 450px;
+      min-width: 375px;
+      background: white;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 48px 48px 0px rgba(118, 108, 241, 20%);
+      line-height: 1.68;
+    }
+    .card-title {
+      color: #1f2f56;
+      font-weight: 900;
+      font-size: 28px;
+    }
+    .card-hero {
+      width: 100%;
+      border-radius: 20px 20px 0 0;
+    }
+    .card-padding {
+      padding-top: 24px;
+      padding-right: 48px;
+      padding-left: 48px;
+      padding-bottom: 48px;
+    }
+    .card-item {
+      padding-left: 1em;
+      position: relative;
+      background: #f5f7ff;
+      width: 100%;
+      border-radius: 10px;
+    }
+    .item-name {
+      font-weight: 900;
+      color: #1f2f56;
+    }
+    .item-price {
+      font-weight: 700;
+    }
+    .item-change {
+      color: #3829e0;
+      font-weight: 700;
+      font-size: .9em;
+    }
+    .item-recap {
+      background-color: #f5f7ff;
+      border-radius: 10px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .card-button {
+      width: 100%;
+      border-radius: 10px;
+      height: 50px;
+      border: none;
+      background: #3829e0;
+      color: #f5f7ff;
+      font-weight: 700;
+      font-size: .9em;
+      margin-top: 2em;
+      box-shadow: 0 12px 24px 0px rgba(118, 108, 241, 50%);
+    }
+    .cancel-order-div {
+      padding-top: 1.5em;
+    }
+    .cancel-order {
+      font-weight: 900;
+    }
+    a.cancel-order {
+      text-decoration: none;
+    }
+    .card-button:hover {
+      background: #766cf1;
+    }
+    .item-change:hover {
+      color: #766cf1;
+      text-decoration: none;
+    }
+    .cancel-order:hover {
+      color: #1f2f56;
+    }
+  }
+  @media screen and (min-height: 741px) {
+  body {
+      background: #e0e8ff url("./images/pattern-background-desktop.svg");
+      background-repeat: repeat-x;
+      margin: 0;
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+    }
+    .main{
+      height: 100%;
+      width: 100%;
+      max-width: 450px;
+      min-width: 375px;
+      background: white;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 48px 48px 0px rgba(118, 108, 241, 20%);
+      line-height: 1.68;
+    }
+    .card-title {
+      color: #1f2f56;
+      font-weight: 900;
+      font-size: 28px;
+    }
+    .card-hero {
+      width: 100%;
+      border-radius: 20px 20px 0 0;
+    }
+    .card-padding {
+      padding-top: 24px;
+      padding-right: 48px;
+      padding-left: 48px;
+      padding-bottom: 48px;
+    }
+    .card-item {
+      padding-left: 1em;
+      position: relative;
+      background: #f5f7ff;
+      width: 100%;
+      border-radius: 10px;
+    }
+    .item-name {
+      font-weight: 900;
+      color: #1f2f56;
+    }
+    .item-price {
+      font-weight: 700;
+    }
+    .item-change {
+      color: #3829e0;
+      font-weight: 700;
+      font-size: .9em;
+    }
+    .item-recap {
+      background-color: #f5f7ff;
+      border-radius: 10px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .card-button {
+      width: 100%;
+      border-radius: 10px;
+      height: 50px;
+      border: none;
+      background: #3829e0;
+      color: #f5f7ff;
+      font-weight: 700;
+      font-size: .9em;
+      margin-top: 2em;
+      box-shadow: 0 12px 24px 0px rgba(118, 108, 241, 50%);
+    }
+    .cancel-order-div {
+      padding-top: 1.5em;
+    }
+    .cancel-order {
+      font-weight: 900;
+    }
+    a.cancel-order {
+      text-decoration: none;
+    }
+    .card-button:hover {
+      background: #766cf1;
+    }
+    .item-change:hover {
+      color: #766cf1;
+      text-decoration: none;
+    }
+    .cancel-order:hover {
+      color: #1f2f56;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="main" role="main">
+    <img class="card-hero" src="./images/illustration-hero.svg" alt="card illustration">
+    <div class="card-padding">
+      <h1 class="card-title">
+        Order Summary
+      </h1>
+      <p class="card-text">
+        You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!
+      </p>
+      <div class="item-recap">
+        
+          <div class="row-item-icon">
+            <img src="./images/icon-music.svg" alt="music icon">
+          </div>
+          <div class="row-item-name">
+            <span class="item-name">Annual Plan</span><br><span class="item-price">$59.99/year</span>
+          </div>
+          <div class="row-item-change">
+            <a class="item-change" href="">Change</a>
+          </div>
+
+      </div>
+      <button class="card-button">
+        Proceed to Payment
+      </button>
+      <div class="cancel-order-div">
+        <a class="cancel-order" href="">
+          Cancel Order
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
