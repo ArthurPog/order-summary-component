@@ -9,7 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
 
-  <title>Frontend Mentor | Order summary card</title>
+  <title>
+    Frontend Mentor | Order summary card
+  </title>
   <!-- Yeah, I know. It's bad practice to put CSS into HTML. I promise, mom, I won't do it in larger,
   multi-page projects on Frontend. Otherwise I will always create separate CSS files even for one-page projects. :) -->
   <style>
@@ -20,7 +22,10 @@
     }
     body {
       background: #e0e8ff url("./images/pattern-background-desktop.svg");
-      background-repeat: repeat-x; /* This is how you get the background to only repeat HORIZONTALLY (X).
+      background-size: contain;
+      background-repeat: repeat-x;
+      background-position: top center;
+      /* This is how you get the background to only repeat HORIZONTALLY (X).
       If you want to repeat it vertically just change the x to y */
 
       /* This is one of the ways how to get a page centred correctly if you want the page to be responsive VERTICALLY in addition
@@ -41,7 +46,7 @@
       align-items: center;
       justify-content: center;
     }
-    .main{
+    main {
       height: 100%;
       width: 100%;
       max-width: 450px;
@@ -147,10 +152,20 @@
     .cancel-order:hover {
       color: #1f2f56;
     }
+    /* This is a rule that says if the browser's or display's width is less than 992px
+    use the mobile background image that we were provided with as part of the challenge */
+    @media screen and (max-width:992px) {
+      body {
+        background: #e0e8ff url("./images/pattern-background-mobile.svg");
+        background-size: contain;
+        background-repeat: repeat-x;
+        background-position: top center;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="main" role="main">
+  <main>
     <img class="card-hero" src="./images/illustration-hero.svg">
     <div class="card-padding">
       <h1 class="card-title">
@@ -181,6 +196,6 @@
         </a>
       </div>
     </div>
-  </div>
+  </main>
 </body>
 </html>
