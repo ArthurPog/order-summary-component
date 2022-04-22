@@ -91,7 +91,8 @@
       align-items: center;
       justify-content: space-between;
     }
-    /*Here I position the Annual Plan above the price using float*/
+    /*Here I position the Annual Plan above the price. I basically turn the inline span into a block element.
+    This would also be possible to achieve using float:
     .item-name {
       float: left;
     }
@@ -99,6 +100,13 @@
       font-weight: 700;
       clear: left;
       float: left;
+    }
+    */
+    .item-name {
+      display: block;
+    }
+    .item-price {
+      font-weight: 700;
     }
     /*--*/
     .item-change {
@@ -143,7 +151,7 @@
 </head>
 <body>
   <div class="main" role="main">
-    <img class="card-hero" src="./images/illustration-hero.svg" alt="card illustration">
+    <img class="card-hero" src="./images/illustration-hero.svg">
     <div class="card-padding">
       <h1 class="card-title">
         Order Summary
@@ -153,7 +161,7 @@
       </p>
       <div class="item-recap">
         <div class="icon-item-group">
-            <img src="./images/icon-music.svg" alt="music icon">
+            <img src="./images/icon-music.svg">
             <div class="price">
               <span class="item-name">Annual Plan</span>
               <span class="item-price">$59.99/year</span>
@@ -164,7 +172,7 @@
           </div>
 
       </div>
-      <button class="card-button">
+      <button class="card-button" type="button">
         Proceed to Payment
       </button>
       <div class="cancel-order-div">
