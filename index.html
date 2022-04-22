@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,7 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
 
   <title>Frontend Mentor | Order summary card</title>
-
+  <!-- Yeah, I know. It's bad practice to put CSS into HTML. I promise, mom, I won't do it in larger,
+  multi-page projects on Frontend. Otherwise I will always create separate CSS files even for one-page projects. :) -->
   <style>
     * {
       font-family: 'Red Hat Display', sans-serif;
@@ -19,9 +20,22 @@
     }
     body {
       background: #e0e8ff url("./images/pattern-background-desktop.svg");
-      background-repeat: repeat-x;
+      background-repeat: repeat-x; /* This is how you get the background to only repeat HORIZONTALLY (X).
+      If you want to repeat it vertically just change the x to y */
+
+      /* This is one of the ways how to get a page centred correctly if you want the page to be responsive VERTICALLY in addition
+      to horizontally. For example, here is a solution that many sites recommend:
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+      Try it and see what happens when you vertically make your browser window really short. You'll notice that the top of the
+      content (image) just disappears without the ability to scroll up and see it. But if you use this, it will display everything
+      correctly even on short viewports.
+      */
       margin: 0;
-      padding: 0;
+      padding: 1em;
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -34,11 +48,10 @@
       min-width: 375px;
       background: white;
       border-radius: 20px;
-      text-align: center;
       box-shadow: 0 48px 48px 0px rgba(118, 108, 241, 20%);
-      line-height: 1.68;
     }
     .card-title {
+      text-align: center;
       color: #1f2f56;
       font-weight: 900;
       font-size: 28px;
@@ -53,25 +66,23 @@
       padding-left: 48px;
       padding-bottom: 48px;
     }
-    .card-item {
-      padding-left: 1em;
-      position: relative;
-      background: #f5f7ff;
-      width: 100%;
-      border-radius: 10px;
+    .card-text {
+      text-align: center;
+      line-height: 1.68em;
     }
     .item-name {
       font-weight: 900;
       color: #1f2f56;
     }
-    .item-price {
-      font-weight: 700;
+    .icon-item-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    .item-change {
-      color: #3829e0;
-      font-weight: 700;
-      font-size: .9em;
+    .icon-item-group img {
+      padding-right: 1em;
     }
+    /* Creating the product summary part with all the elements inline and centered vertically */
     .item-recap {
       background-color: #f5f7ff;
       border-radius: 10px;
@@ -79,6 +90,21 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+    }
+    /*Here I position the Annual Plan above the price using float*/
+    .item-name {
+      float: left;
+    }
+    .item-price {
+      font-weight: 700;
+      clear: left;
+      float: left;
+    }
+    /*--*/
+    .item-change {
+      color: #3829e0;
+      font-weight: 700;
+      font-size: .9em;
     }
     .card-button {
       width: 100%;
@@ -94,6 +120,7 @@
     }
     .cancel-order-div {
       padding-top: 1.5em;
+      text-align: center;
     }
     .cancel-order {
       font-weight: 900;
@@ -104,6 +131,7 @@
     .card-button:hover {
       background: #766cf1;
     }
+    /* This takes the underline away when you hover over the Change link */
     .item-change:hover {
       color: #766cf1;
       text-decoration: none;
@@ -124,15 +152,15 @@
         You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!
       </p>
       <div class="item-recap">
-        
-          <div class="row-item-icon">
+        <div class="icon-item-group">
             <img src="./images/icon-music.svg" alt="music icon">
-          </div>
-          <div class="row-item-name">
-            <span class="item-name">Annual Plan</span><br><span class="item-price">$59.99/year</span>
-          </div>
+            <div class="price">
+              <span class="item-name">Annual Plan</span>
+              <span class="item-price">$59.99/year</span>
+            </div>
+        </div>
           <div class="row-item-change">
-            <a class="item-change" href="">Change</a>
+            <a class="item-change" href="#">Change</a>
           </div>
 
       </div>
@@ -140,7 +168,7 @@
         Proceed to Payment
       </button>
       <div class="cancel-order-div">
-        <a class="cancel-order" href="">
+        <a class="cancel-order" href="#">
           Cancel Order
         </a>
       </div>
