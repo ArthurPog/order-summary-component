@@ -12,9 +12,13 @@
   <title>
     Frontend Mentor | Order summary card
   </title>
-  <!-- Yeah, I know. It's bad practice to put CSS into HTML. I promise, mom, I won't do it in larger,
+  
+  <!--
+  Yeah, I know. It's bad practice to put CSS into HTML. I promise, mom, I won't do it in larger,
   multi-page projects on Frontend. Otherwise I will always create separate CSS files also for one-page projects
-  when working professionally. :) -->
+  when working professionally. :)
+  -->
+  
   <style>
     * {
       font-family: 'Red Hat Display', sans-serif;
@@ -26,10 +30,14 @@
       background-size: contain;
       background-repeat: repeat-x;
       background-position: top center;
-      /* This is how you get the background to only repeat HORIZONTALLY (X).
-      If you want to repeat it vertically just change the x to y */
+      
+      /*
+      This is how you get the background to only repeat HORIZONTALLY (X).
+      If you want to repeat it vertically just change the x to y
+      */
 
-      /* This is one of the ways how to get a page centred correctly if you want the page to be responsive VERTICALLY in addition
+      /*
+      This is one of the ways how to get a page centred correctly if you want the page to be responsive VERTICALLY in addition
       to horizontally. For example, here is a solution that many sites recommend:
       position: absolute;
       top: 50%;
@@ -40,6 +48,7 @@
       content (image) just disappears without the ability to scroll up and see it. But if you use this, it will display everything
       correctly even on short viewports.
       */
+      
       margin: 1em;
       padding: 0;
       min-height: 100vh;
@@ -167,7 +176,7 @@
 </head>
 <body>
   <main>
-    <img class="card-hero" src="./images/illustration-hero.svg">
+    <img class="card-hero" src="./images/illustration-hero.svg" alt="">
     <div class="card-padding">
       <h1 class="card-title">
         Order Summary
@@ -177,7 +186,7 @@
       </p>
       <div class="item-recap">
         <div class="icon-item-group">
-            <img src="./images/icon-music.svg">
+            <img src="./images/icon-music.svg" alt="">
             <div class="price">
               <span class="item-name">Annual Plan</span>
               <span class="item-price">$59.99/year</span>
