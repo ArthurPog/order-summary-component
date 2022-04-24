@@ -14,9 +14,9 @@ I solved this by having conditional CSS that basically completely changes the ru
 
 [SOLVED]:
 
-- 1[^st] issue: Three element grouping fixed by using a combination of correctly created groups with divs and the display: flex property. This is of course one of the solutions, I am pretty sure I saw someone fix this with grids a while back.
+First issue: Three element grouping fixed by using a combination of correctly created groups with divs and the display: flex property. This is of course one of the solutions, I am pretty sure I saw someone fix this with grids a while back.
 
-- 2[^nd] issue: The vertical centering was solved with:
+Second issue: The vertical centering was solved with:
 
 `min-height: 100vh;`<br>
 `display: flex;`<br>
