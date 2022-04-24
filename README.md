@@ -18,8 +18,8 @@ I solved this by having conditional CSS that basically completely changes the ru
 
 **2^nd^ issue:** The vertical centering was solved with:
 
-`min-height: 100vh;<br>
-display: flex;<br>
+`min-height: 100vh;`<br>
+`display: flex;`<br>
 align-items: center;<br>
 justify-content: center;`<br>
 
