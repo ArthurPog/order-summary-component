@@ -18,16 +18,16 @@ I solved this by having conditional CSS that basically completely changes the ru
 
 - Second issue: The vertical centering was solved with:
 
-`min-height: 100vh;`<br>
-`display: flex;`<br>
-`align-items: center;`<br>
-`justify-content: center;`<br>
+    `min-height: 100vh;`<br>
+    `display: flex;`<br>
+    `align-items: center;`<br>
+    `justify-content: center;`<br>
 
-This following solution was not elegant:
+    This following solution was not elegant:
 
-`position: absolute;`<br>
-`top: 50%;`<br>
-`left: 50%;`<br>
-`transform: translate(-50%, -50%);`<br>
+    `position: absolute;`<br>
+    `top: 50%;`<br>
+    `left: 50%;`<br>
+    `transform: translate(-50%, -50%);`<br>
 
-The reason for that is it causes glitches when the viewport is shorter in height than the content.
+    The reason for that is it causes glitches when the viewport is shorter in height than the content.
