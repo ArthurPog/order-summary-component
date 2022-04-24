@@ -18,16 +18,16 @@ I solved this by having conditional CSS that basically completely changes the ru
 
 **2^nd^ issue:** The vertical centering was solved with:
 
-min-height: 100vh;
-display: flex;
-align-items: center;
-justify-content: center;
+min-height: 100vh;<br>
+display: flex;<br>
+align-items: center;<br>
+justify-content: center;<br>
 
 This following solution was not elegant:
 
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+position: absolute;<br>
+top: 50%;<br>
+left: 50%;<br>
+transform: translate(-50%, -50%);<br>
 
 The reason for that is it causes glitches when the viewport is shorter in height than the content.
