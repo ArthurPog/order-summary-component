@@ -1,4 +1,4 @@
-# Frontend Mentor - Order summary card
+# My third project and solution to the order summary component challenge over at [Frontend Mentor](https://www.frontendmentor.io/challenges)
 
 ## This was the assignment
 
