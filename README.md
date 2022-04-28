@@ -1,5 +1,15 @@
 # Frontend Mentor - Order summary card
 
+## This was the assignment
+
+![](./design/desktop-design.jpg)
+
+## This is my solution
+
+[Click here to see the live page](https://arthurpog.github.io/order-summary-component/)
+
+![](./design/my_solution.png)
+
 This is my *third* challenge from Frontend Mentor.
 
 I had **2 big issues** with this one.
